@@ -1,0 +1,71 @@
+:root {
+    --card-height: 60vh;
+    --card-width: calc(var(--card-height) / 1.5);
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #191c29;
+}
+.main-content {
+    height: 75vh;
+    /* width: 32vw; */
+    padding: 0 10vh;
+    /* border-radius: 5vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2vh 7vh;
+    
+    perspective: 1000px;
+}
+
+.main-content:hover {
+    border: 1px double white;
+    background-color: rgba(249, 249, 249, 0.043);
+    
+}
+
+.card {
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0px 36px;
+    perspective: 2500px;
+    /* margin: 0px 8vw; */
+    cursor: pointer;
+}
+
+.cover-image {
+    width: 100%;
+    height: 100%;
+}
+.wrapper {
+    transition: all 1s ease-out;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.title {
+    width: 90%;
+    transition: transform 0.5s;
+    filter: brightness(1) contrast(1.5);
+    position: relative;
+    right: -20%;
+}
+
+.character {
+    width: 110%;
+    z-index: -1;
+    opacity: 0;
+    position: absolute;
+    top: -8vh;
+    right: -20vh;
+}
