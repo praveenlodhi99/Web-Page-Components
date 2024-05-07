@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(Bg1.jpg );
+
+    /* it is used to cover page i.e. 100vh & 100 vw. */
+    background-size: cover;    
+}
+
+.cloud {
+    position: absolute;
+    top: 0;;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(cloud.png);
+    animation: animate-cloud 100s linear infinite;
+}
+
+@keyframes animate-cloud {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: 5440px;
+    }
+}
